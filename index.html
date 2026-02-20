@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نتائج قياس</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Tahoma;
+  background:#f3f5f9;
+}
+
+/* الهيدر */
+.header{
+  background:#fff;
+  padding:12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo{
+  height:45px;
+}
+
+/* العنوان */
+.title{
+  background:#fff;
+  margin:15px;
+  padding:15px;
+  border-radius:10px;
+  font-size:18px;
+  color:#444;
+}
+
+/* البحث */
+.search-box{
+  background:#fff;
+  margin:15px;
+  padding:15px;
+  border-radius:10px;
+}
+
+select, .search-btn{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:15px;
+}
+
+.search-btn{
+  background:#2d5f90;
+  color:#fff;
+  border:none;
+}
+
+/* الكروت */
+.card{
+  background:#fff;
+  margin:15px;
+  padding:15px;
+  border-radius:12px;
+  box-shadow:0 3px 8px rgba(0,0,0,0.08);
+}
+
+.score{
+  margin-top:10px;
+  font-size:16px;
+}
+
+.btn{
+  background:#5bc0de;
+  border:none;
+  color:#fff;
+  padding:10px 20px;
+  border-radius:8px;
+  margin-top:10px;
+  cursor:pointer;
+}
+
+.details{
+  display:none;
+  margin-top:15px;
+}
+
+.details img{
+  width:100%;
+  border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+☰
+<img class="logo" src="https://upload.wikimedia.org/wikipedia/ar/thumb/6/6f/Qiyas_logo.svg/512px-Qiyas_logo.svg.png">
+</div>
+
+<div class="title">النتائج</div>
+
+<div class="search-box">
+نوع الاختبار
+<select>
+<option>القدرات العامة</option>
+</select>
+<button class="search-btn">بحث</button>
+</div>
+
+<!-- النتيجة 1 -->
+<div class="card">
+اختبار القدرات العامة الورقي
+<div class="score">الدرجة الكلية : 91</div>
+<button class="btn" onclick="toggleDetails(this)">التفاصيل</button>
+<div class="details">
+<img src="img1.jpg">
+</div>
+</div>
+
+<!-- النتيجة 2 -->
+<div class="card">
+اختبار القدرات (محوسب)
+<div class="score">الدرجة الكلية : 89</div>
+<button class="btn" onclick="toggleDetails(this)">التفاصيل</button>
+<div class="details">
+<img src="img2.jpg">
+</div>
+</div>
+
+<!-- النتيجة 3 -->
+<div class="card">
+اختبار القدرات (محوسب)
+<div class="score">الدرجة الكلية : 67</div>
+<button class="btn" onclick="toggleDetails(this)">التفاصيل</button>
+<div class="details">
+<img src="img3.jpg">
+</div>
+</div>
+
+<script>
+function toggleDetails(button){
+  let details = button.nextElementSibling;
+  details.style.display =
+  details.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
